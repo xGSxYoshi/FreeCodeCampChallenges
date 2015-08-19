@@ -1,0 +1,15 @@
+function add() {
+  var first = arguments[0];
+  if (arguments.length == 1 && typeof first === "number"){
+    return function(x){
+      return add(first, x);
+    };
+  }else if (arguments.length == 2 && typeof first === "number" && typeof arguments[1] === "number"){
+    return first + arguments[1];
+  }else{
+    return undefined;
+  }
+
+}
+
+add(2,3);
