@@ -1,0 +1,15 @@
+function where(collection, source) {
+  var arr = [];
+  // What's in a name?
+  src_keys = Object.keys(source);
+  arr = collection.filter(function(i){
+    for(j = 0; j < src_keys.length; j++){
+      if(!i.hasOwnProperty(src_keys[j]) || i[src_keys[j]] !== source[src_keys[j]]){
+        return false;
+      }
+    }
+    return true;
+   });
+  // A rose by any other name
+  return arr;
+}
