@@ -1,0 +1,16 @@
+function diff(arr1, arr2) {
+//just add two two arrays together
+ var newArr = arr1.concat(arr2);
+ //then filter it
+ return newArr.filter(function(val){
+ // return true if the value is not in one of the arrays
+   if (arr1.indexOf(val) < 0 || arr2.indexOf(val) < 0){
+     return true;
+   }else{
+     return false;
+   }
+ });
+}
+
+
+diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
