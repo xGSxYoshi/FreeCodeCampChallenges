@@ -1,0 +1,14 @@
+function destroyer(arr) {
+  var args = [];
+  for (i = 1; i < arguments.length; i++){
+    args.push(arguments[i]);
+  }
+  return arr.filter(function(x){
+    if (args.indexOf(x) >= 0)
+      return false;
+    else
+      return true;
+  }); 
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
